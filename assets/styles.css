@@ -1,12 +1,14 @@
 :root{
-  --bg: #0b0f14;
-  --bg2:#0f1620;
-  --card:#0f1722;
+  --bg: #071225;        /* deep navy */
+  --bg2:#0b1a33;       /* secondary blue */
+  --card:#0e2244;      /* card background */
   --text:#e8eef7;
   --muted:#a7b4c6;
   --line: rgba(255,255,255,.10);
-  --accent:#c9a24a; /* subtle “copper” */
-  --accent2:#8fb6ff;
+
+  --accent:#6fa8ff;    /* subtle blue accent */
+  --accent2:#9fbfff;  /* lighter blue */
+
   --shadow: 0 14px 40px rgba(0,0,0,.45);
   --radius: 18px;
   --max: 1120px;
