@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Book an Interview — Ore Media</title>
+  <meta name="description" content="Book a structured long-form interview with Ore Media." />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a class="brand" href="index.html" aria-label="Ore Media home">
+          <span class="logo" aria-hidden="true"></span>
+          <span>Ore Media</span>
+        </a>
+
+        <div class="navlinks" role="navigation" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="interviews.html">Interviews</a>
+          <a href="about.html">About</a>
+          <a class="active btn primary" href="book.html">Book an Interview</a>
+        </div>
+
+        <a href="book.html" class="btn primary">Book an Interview</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container">
+        <div class="hcard">
+          <div class="kicker">Book an Interview</div>
+          <h1 style="margin-top:10px;">Structured. Serious. Investor-grade.</h1>
+          <p class="subhead">
+            Ore Media conducts long-form interviews with junior mining executives focused on projects, milestones, capital structure, and strategy.
+          </p>
+
+          <div class="hr"></div>
+
+          <div class="two-col">
+            <div class="card">
+              <h3>What to expect</h3>
+              <ul class="list">
+                <li>30–60 minute recorded interview</li>
+                <li>Fundamentals-first discussion</li>
+                <li>Distributed across Ore Media channels</li>
+              </ul>
+            </div>
+
+            <div class="card">
+              <h3>Who should apply</h3>
+              <ul class="list">
+                <li>Publicly listed junior mining companies</li>
+                <li>Exploration or development stage</li>
+                <li>Management willing to speak substantively</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="hero-actions" style="margin-top:16px;">
+            <!-- Replace BOOKING_LINK with your TidyCal/Calendly link -->
+            <a class="btn primary" href="BOOKING_LINK" target="_blank" rel="noopener">Request an Interview</a>
+            <!-- Replace EMAIL below -->
+            <a class="smalllink" href="mailto:YOUR_EMAIL@domain.com">Email →</a>
+          </div>
+
+          <p class="note"><strong>Submission does not guarantee acceptance.</strong></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Ore Media
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
