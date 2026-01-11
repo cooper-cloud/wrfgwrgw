@@ -3,300 +3,86 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Ore Media — Recorded CEO Interviews</title>
-  <meta name="description" content="Ore Media books recorded CEO interviews and produces investor-focused content for junior mining companies." />
+  <title>About — Miners Media</title>
+  <meta name="description" content="About Miners Media: mining management interviews and investor-focused research." />
   <meta name="theme-color" content="#0B0F19" />
-
-  <style>
-    :root{
-      --bg:#0B0F19;
-      --panel:rgba(17,24,39,.65);
-      --card:rgba(255,255,255,.035);
-      --text:#E5E7EB;
-      --muted:#94A3B8;
-      --line:rgba(255,255,255,.10);
-      --accent:#38BDF8;
-      --accent2:#A78BFA;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius:18px;
-      --max: 1060px;
-    }
-
-    *{box-sizing:border-box}
-    html,body{
-      margin:0; padding:0;
-      background:
-        radial-gradient(1100px 700px at 15% 10%, rgba(56,189,248,.18), transparent 60%),
-        radial-gradient(1100px 700px at 80% 30%, rgba(167,139,250,.14), transparent 55%),
-        var(--bg);
-      color:var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:var(--max); margin:0 auto; padding:26px 18px 72px}
-
-    /* NAV */
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      padding:14px 16px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      background:rgba(17,24,39,.55);
-      backdrop-filter: blur(10px);
-      position:sticky;
-      top:16px;
-      z-index:10;
-      gap:14px;
-    }
-    .brand img{height:40px; width:auto; object-fit:contain}
-    .navlinks{
-      display:flex; gap:12px; align-items:center;
-      font-size:14px; color:var(--muted);
-      flex:1; justify-content:center;
-    }
-    .navlinks a{padding:10px 12px; border-radius:999px}
-    .navlinks a:hover{background:rgba(255,255,255,.06); color:var(--text)}
-
-    /* BUTTON */
-    .btn{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      padding:10px 16px;
-      border-radius:999px;
-      font-weight:700;
-      font-size:14px;
-      border:1px solid var(--line);
-      background:linear-gradient(135deg, rgba(56,189,248,.18), rgba(167,139,250,.14));
-      cursor:pointer;
-      white-space:nowrap;
-      transition:transform .12s ease, background .12s ease, border-color .12s ease;
-    }
-    .btn:hover{
-      transform:translateY(-1px);
-      background:linear-gradient(135deg, rgba(56,189,248,.22), rgba(167,139,250,.18));
-      border-color:rgba(255,255,255,.18);
-    }
-
-    /* HERO */
-    .hero{
-      padding:72px 6px 10px;
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:28px;
-      align-items:start;
-    }
-    h1{font-size:42px; line-height:1.1; margin:0 0 16px}
-    .lead{
-      color:var(--muted);
-      font-size:16px;
-      line-height:1.6;
-      max-width:620px;
-      margin:0;
-    }
-    .heroBtns{display:flex; gap:12px; flex-wrap:wrap; margin-top:24px}
-
-    .panel{
-      border:1px solid var(--line);
-      background:var(--panel);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:20px;
-    }
-    .panelHeader{
-      display:flex;
-      align-items:center;
-      gap:14px;
-      margin-bottom:12px;   /* spacing fix */
-    }
-    .headshot{
-      width:56px;
-      height:56px;
-      border-radius:50%;
-      object-fit:cover;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      flex:0 0 auto;
-    }
-    .nameBox{
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-      min-width:0;
-    }
-    .nameTag{
-      display:inline-flex;
-      width:fit-content;
-      padding:6px 10px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.03);
-      font-weight:750;
-      font-size:13px;
-      letter-spacing:.2px;
-    }
-    .panelLine{
-      color:var(--muted);
-      font-size:14px;
-      line-height:1.45;
-      margin:0;
-    }
-
-    /* SECTIONS */
-    .section{padding:56px 6px 0} /* spacing fix between blocks */
-    .section h2{font-size:20px; margin:0 0 14px}
-    .grid{display:grid; gap:16px}
-    .grid.cols2{grid-template-columns:repeat(2,1fr)}
-    .card{
-      border:1px solid var(--line);
-      background:var(--card);
-      border-radius:16px;
-      padding:20px; /* spacing fix inside cards */
-    }
-    .card h3{margin:0 0 10px; font-size:18px}
-    .card p{margin:0 0 16px; color:var(--muted); line-height:1.6}
-
-    /* BOOKING */
-    #tidycal-embed{
-      border:1px solid var(--line);
-      border-radius:16px;
-      overflow:hidden;
-      min-height:760px;
-      background:rgba(255,255,255,.02);
-    }
-    .fallback{
-      margin-top:14px;
-      color:var(--muted);
-      font-size:14px;
-    }
-    .fallback a{text-decoration:underline}
-
-    /* LINKEDIN spacing fix */
-    .linkedinCard{margin-top:10px}
-
-    /* FOOTER */
-    .footer{
-      margin-top:72px; /* spacing fix so LinkedIn isn't cramped */
-      padding-top:18px;
-      border-top:1px solid rgba(255,255,255,.06);
-      font-size:13px;
-      color:var(--muted);
-      display:flex;
-      justify-content:space-between;
-      flex-wrap:wrap;
-      gap:12px;
-    }
-
-    @media (max-width:900px){
-      .hero{grid-template-columns:1fr}
-      .navlinks{display:none}
-      h1{font-size:36px}
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
-<body>
+<body data-page="about">
+  <a class="skip" href="#main">Skip to content</a>
+
   <div class="wrap">
-
-    <!-- NAV -->
-    <div class="nav">
+    <div class="nav" role="navigation" aria-label="Primary">
       <div class="brand">
-        <img src="websitelogo.png" alt="Ore Media logo">
-      </div>
-
-      <div class="navlinks">
-        <a href="#book">Booking</a>
-        <a href="#work">Recent work</a>
-        <a href="#linkedin">LinkedIn</a>
-      </div>
-
-      <a class="btn" href="https://tidycal.com/oremedia/booking" target="_blank" rel="noopener">
-        Book Recorded Interview
-      </a>
-    </div>
-
-    <!-- HERO -->
-    <div class="hero">
-      <div>
-        <h1>Book CEO discussions that retail investors actually watch.</h1>
-
-        <p class="lead">
-          Ore Media helps junior mining companies tell the story clearly — the asset, the catalyst,
-          and the plan — through clean, recorded CEO interviews designed for investor attention and sharing.
-        </p>
-
-        <div class="heroBtns">
-          <a class="btn" href="#book">Book a discussion</a>
-          <a class="btn" href="#work">View recent work</a>
+        <img src="websitelogo.png" alt="Miners Media logo" />
+        <div class="brandText">
+          <strong>Miners Media</strong>
+          <span>About • Positioning</span>
         </div>
       </div>
 
-      <div class="panel">
-        <div class="panelHeader">
-          <img class="headshot" src="Aragon-Headshot-Cooper-Ginn-87.jpg" alt="Cooper John headshot">
-          <div class="nameBox">
-            <span class="nameTag">Cooper John</span>
-            <p class="panelLine">Recorded interviews • Investor-focused • Junior mining specialists</p>
-          </div>
-        </div>
+      <div class="navlinks" aria-label="Site">
+        <a href="index.html" data-nav="home">Home</a>
+        <a href="book.html" data-nav="book">Booking</a>
+        <a href="work.html" data-nav="work">Work</a>
+        <a href="research.html" data-nav="research">Research</a>
+        <a href="about.html" data-nav="about">About</a>
       </div>
+
+      <button id="menuBtn" class="menuBtn" aria-label="Open menu" aria-expanded="false">☰</button>
+
+      <a class="btn" href="book.html">Book an Interview</a>
     </div>
 
-    <!-- RECENT WORK -->
-    <div id="work" class="section">
-      <h2>Recent work</h2>
+    <div id="menu" class="menu" data-open="false" aria-label="Mobile menu">
+      <a href="index.html">Home</a>
+      <a href="book.html">Booking</a>
+      <a href="work.html">Work</a>
+      <a href="research.html">Research</a>
+      <a href="about.html">About</a>
+    </div>
+
+    <main id="main" class="section">
+      <h2>About</h2>
+      <p class="sectionIntro">
+        Miners Media is built around one thing: high-signal communication between mining companies and investors.
+        The format is clean, recorded, and designed to be shared.
+      </p>
 
       <div class="grid cols2">
         <div class="card">
-          <h3>Investor Presentation — YouTube</h3>
-          <a class="btn" href="https://www.youtube.com/watch?v=SvceQmTNmes" target="_blank" rel="noopener">
-            Watch on YouTube
-          </a>
+          <h3>Focus</h3>
+          <p>
+            Mining management interviews (CEO/MD/technical leads) with capital markets framing.
+            The goal is clarity: what the asset is, why it matters, and what comes next.
+          </p>
+          <div class="metaRow">
+            <span class="tag">Mining</span>
+            <span class="tag">Investors</span>
+            <span class="tag">Clarity</span>
+          </div>
         </div>
 
         <div class="card">
-          <h3>Recorded CEO Interview</h3>
-          <p>15-minute interview promoted to a growing retail mining audience.</p>
-          <a class="btn" href="#book">Open booking</a>
+          <h3>Contact / Connect</h3>
+          <p>Use LinkedIn for fast contact or book directly via the calendar.</p>
+          <div class="heroBtns" style="margin-top:10px">
+            <a class="btn" href="book.html">Book an interview</a>
+            <a class="btn ghost" href="https://www.linkedin.com/in/cooper-john-ab98503a0/" target="_blank" rel="noopener">
+              LinkedIn
+            </a>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
 
-    <!-- BOOKING -->
-    <div id="book" class="section">
-      <h2>Booking</h2>
-
-      <div id="tidycal-embed" data-path="oremedia/booking"></div>
-
-      <div class="fallback">
-        If the embed doesn’t load, book directly:
-        <a href="https://tidycal.com/oremedia/booking" target="_blank" rel="noopener">tidycal.com/oremedia/booking</a>
-      </div>
-    </div>
-
-    <!-- LINKEDIN -->
-    <div id="linkedin" class="section">
-      <h2>Connect on LinkedIn</h2>
-
-      <div class="linkedinCard">
-        <a class="btn" href="https://www.linkedin.com/in/cooper-john-ab98503a0/" target="_blank" rel="noopener">
-          View LinkedIn Profile
-        </a>
-      </div>
-    </div>
-
-    <!-- FOOTER -->
     <div class="footer">
-      <div>© <span id="y"></span> Ore Media</div>
-      <div>CEO discussions • Investor-focused content • Retail distribution</div>
+      <div>© <span id="y"></span> Miners Media</div>
+      <div>About • Interviews • Research</div>
     </div>
-
   </div>
 
-  <!-- TidyCal embed script -->
-  <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+  <script src="main.js"></script>
 </body>
 </html>
