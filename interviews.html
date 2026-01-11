@@ -3,12 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Book an Interview — Ore Media</title>
-  <meta name="description" content="Request a structured, long-form interview with Ore Media." />
+  <title>Interviews — Ore Media</title>
+  <meta name="description" content="Ore Media interviews with junior mining executives." />
   <link rel="stylesheet" href="assets/styles.css" />
-
-  <!-- TidyCal Embed Script -->
-  <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 </head>
 <body>
   <header class="header">
@@ -19,13 +16,16 @@
           <span>Ore Media</span>
         </a>
 
+        <!-- LEFT NAV (added LinkedIn tab) -->
         <div class="navlinks" role="navigation" aria-label="Primary">
           <a href="index.html">Home</a>
-          <a href="interviews.html">Interviews</a>
+          <a class="active" href="interviews.html">Interviews</a>
           <a href="about.html">About</a>
-          <a class="active btn primary" href="book.html">Book an Interview</a>
+          <!-- Replace with your LinkedIn URL -->
+          <a href="https://www.linkedin.com/company/ore-media/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
 
+        <!-- RIGHT CTA -->
         <a href="book.html" class="btn primary">Book an Interview</a>
       </nav>
     </div>
@@ -35,21 +35,30 @@
     <section class="section">
       <div class="container">
         <div class="hcard">
-          <div class="kicker">Book an Interview</div>
-          <h1 style="margin-top:10px;">Interview Requests</h1>
-
-          <div class="hr"></div>
-
-          <!-- TidyCal Inline Embed -->
-          <div
-            class="tidycal-embed"
-            data-path="oremedia/booking"
-            style="min-height:700px;width:100%;">
-          </div>
-
-          <p class="note" style="margin-top:14px;">
-            Submission does not guarantee acceptance.
+          <div class="kicker">Interviews</div>
+          <h1 style="margin-top:10px;">Conversations with management teams.</h1>
+          <p class="subhead">
+            Long-form interviews across exploration, development, and capital markets strategy.
           </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-top:10px;">
+      <div class="container">
+        <div class="video-grid">
+
+          <!-- ONE INTERVIEW (replace VIDEO_ID + title/subtext) -->
+          <article class="card video">
+            <!-- Replace VIDEO_ID below with your YouTube video ID -->
+            <iframe class="embed" src="https://www.youtube.com/embed/VIDEO_ID" title="Ore Media Interview" allowfullscreen></iframe>
+            <div class="meta">
+              <!-- Replace these 2 lines with your real interview details -->
+              <p class="title">Company Name (TICKER) — Interview Title</p>
+              <p class="sub">Date • Duration • Key topics</p>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
