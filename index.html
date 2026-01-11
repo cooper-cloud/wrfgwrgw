@@ -16,14 +16,16 @@
           <span>Ore Media</span>
         </a>
 
-        <!-- LEFT NAV (no duplicate CTA) -->
+        <!-- LEFT NAV (added LinkedIn tab) -->
         <div class="navlinks" role="navigation" aria-label="Primary">
           <a class="active" href="index.html">Home</a>
           <a href="interviews.html">Interviews</a>
           <a href="about.html">About</a>
+          <!-- Replace with your LinkedIn URL -->
+          <a href="https://www.linkedin.com/company/ore-media/" target="_blank" rel="noopener">LinkedIn</a>
         </div>
 
-        <!-- RIGHT CTA (single, deliberate) -->
+        <!-- RIGHT CTA -->
         <a href="book.html" class="btn primary">Book an Interview</a>
       </nav>
     </div>
@@ -115,3 +117,50 @@
               <li>Evergreen content that compounds over time</li>
               <li>Clean presentation and distribution</li>
             </ul>
+          </div>
+
+          <div class="card">
+            <h3>What Ore Media is not</h3>
+            <ul class="list">
+              <li>No “promo hype” campaigns</li>
+              <li>No short-form gimmicks</li>
+              <li>No broker / promoter affiliation</li>
+              <li>No guaranteed acceptance</li>
+            </ul>
+            <p class="note"><strong>Ore Media is not a marketing agency.</strong> Interviews are editorial in nature.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Featured interview</h2>
+        <p class="lead">Your latest conversation with a management team.</p>
+
+        <div class="video-grid" style="grid-template-columns: 1fr;">
+          <article class="card video">
+            <!-- Replace VIDEO_ID below with your YouTube video ID -->
+            <iframe class="embed" src="https://www.youtube.com/embed/VIDEO_ID" title="Ore Media Interview" allowfullscreen></iframe>
+            <div class="meta">
+              <!-- Replace these 2 lines with your real interview details -->
+              <p class="title">Company Name (TICKER) — Interview Title</p>
+              <p class="sub">Date • Duration • Key topics</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      © <span id="year"></span> Ore Media • Independent junior mining interviews & analysis
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
