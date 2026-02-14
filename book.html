@@ -10,23 +10,22 @@
   <!-- TidyCal Embed Script -->
   <script src="https://asset-tidycal.b-cdn.net/js/embed.js" async></script>
 </head>
+
 <body>
   <header class="header">
     <div class="container">
-      <nav class="nav">
+      <nav class="nav" aria-label="Primary">
         <a class="brand" href="index.html" aria-label="Ore Media home">
           <img src="assets/logo.png" alt="Ore Media logo" class="logo-img" />
           <span>Ore Media</span>
         </a>
 
-        <!-- LEFT NAV -->
-        <div class="navlinks" role="navigation" aria-label="Primary">
+        <div class="navlinks">
           <a href="index.html">Home</a>
           <a href="about.html">About</a>
         </div>
 
-        <!-- RIGHT CTA -->
-        <a href="book.html" class="btn primary">Book an Interview</a>
+        <a href="book.html" class="btn primary active" aria-current="page">Book an Interview</a>
       </nav>
     </div>
   </header>
@@ -36,17 +35,17 @@
       <div class="container">
         <div class="hcard">
           <div class="kicker">Interview Booking</div>
-          <h1 style="margin-top:10px;">Interview Booking</h1>
+          <h1 class="mt-10">Interview Booking</h1>
 
           <div class="hr"></div>
 
+          <p class="note" id="tidycal-fallback">Loading scheduler…</p>
+
           <!-- TidyCal Inline Embed -->
           <div
-            class="tidycal-embed"
-            data-path="oremedia/booking"
-            style="min-height:700px;width:100%;">
+            class="tidycal-embed tidycal-box"
+            data-path="oremedia/booking">
           </div>
-
         </div>
       </div>
     </section>
@@ -60,6 +59,7 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+
+    // Hide fallback once TidyCal likely renders (best-effort, no hard dependency).
+    window.addEventListener("load", () => {
+      const fb = document.getElementById("tidycal-fallback
