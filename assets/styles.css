@@ -46,7 +46,6 @@ body{
   display:block;
 }
 
-
 a{ color:inherit; text-decoration:none; }
 a:hover{ opacity:.9; }
 
@@ -391,3 +390,17 @@ h1{
   font-size: 13px;
   margin-top: 10px;
 }
+
+/* =========================
+   Additions (FINAL FIXES)
+   ========================= */
+
+/* Utilities */
+.mt-10 { margin-top: 10px; }
+.section-tight-top { padding-top: 10px; }
+
+/* TidyCal */
+.tidycal-box { min-height: 700px; width: 100%; }
+
+/* Single-column video grid helper */
+.video-grid-single { grid-template-columns: 1fr; }
