@@ -2,5 +2,5 @@
 
 Independent long-form interviews with junior mining executives.
 
-Website: https://yourdomain.com
+Website: https://minersmedia.com
 Contact: cooper@minersmedia.com
